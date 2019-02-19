@@ -1,0 +1,23 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.left-div {
+  height: 950px;
+  background-color: blue;
+}
+
+.right-div {
+  padding-top: 50px;
+  height: 950px;
+  background-color: whitesmoke;
+}
+
+.right-div .card {
+  margin: 0px 60px 0px 60px;
+  width: auto;
+}

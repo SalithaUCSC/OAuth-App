@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">OAuth Application</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item <% if (page === 'home') { %>active<% } %>">
+          <a class="nav-link" href="/">HOME</a>
+        </li>
+        <% if (user) {%>
+          <li class="nav-item <% if (page === 'profile') { %>active<% } %>">
+              <a class="nav-link" href="/profile">PROFILE</a>
+          </li>
+          <li class="nav-item">
+              <a class="btn btn-danger" href="/auth/logout">LOG OUT</a>
+          </li>
+        <% } else {%>
+          <li class="nav-item <% if (page === 'login') { %>active<% } %>">
+            <a class="nav-link" href="/auth/login">LOGIN</a>
+          </li>
+          <li class="nav-item <% if (page === 'signup') { %>active<% } %>">
+              <a class="nav-link" href="/auth/signup">SIGN UP</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>  
