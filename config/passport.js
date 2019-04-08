@@ -35,7 +35,7 @@ passport.use(
                     oauthId: profile.id,
                     email: profile.emails[0].value,
                     type: 'google',
-                    image: profile._json.image.url+"0"
+                    image: profile._json.image.url+"?sz=500"
                 })
                 .save()
                 .then((newUser) => {
