@@ -15,6 +15,10 @@ const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 // Initializa Passport
 const passport = require('passport');
+// const session = require("express-session");
+
+// app.use(session({ secret: "login" }));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -58,11 +62,11 @@ app.get('/', (req, res) => {
 //     res.render('login', { title: 'Login To App', user: req.user});
 // });
 
+
 app.get('/google80b88df8fbd2b89f.html', (req, res) => {
     // res.sendFile(path.join(__dirname+'/index.html'));
     res.sendFile(path.join(__dirname+'/google80b88df8fbd2b89f.html'), { title: 'Login | Express OAuth App', user: req.user, page: 'verify' });
 });
-
 // export Routes 
 const authRouter = require('./routes/auth-router');
 app.use('/auth', authRouter);

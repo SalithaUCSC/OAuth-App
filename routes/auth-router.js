@@ -15,6 +15,15 @@ authRouter.get('/login', authCheck, (req, res) => {
     res.render('login', { title: 'Login | Express OAuth App', user: req.user, page: 'login' });
 });
 
+// authRouter.post('/loginLocal', (req, res, next) => {
+//     console.log(req);
+//     passport.authenticate('local', {
+//         successRedirect: '/profile',
+//         failureRedirect: '/login',
+//         failureFlash: true
+//     })(req, res, next);
+// });
+
 authRouter.get('/signup', authCheck, (req, res) => {
     res.render('signup', { title: 'SignUp | Express OAuth App', user: req.user, page: 'signup' });
 });

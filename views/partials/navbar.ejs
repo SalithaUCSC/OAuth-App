@@ -6,23 +6,23 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item <% if (page === 'home') { %>active<% } %>">
+          <!-- <li class="nav-item <% if (page === 'home') { %>active<% } %>">
           <a class="nav-link" href="/">HOME</a>
-        </li>
+        </li> -->
         <% if (user) {%>
-          <li class="nav-item <% if (page === 'profile') { %>active<% } %>">
+          <!-- <li class="nav-item <% if (page === 'profile') { %>active<% } %>">
               <a class="nav-link" href="/profile">PROFILE</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-              <a class="btn btn-danger" href="/auth/logout">LOG OUT</a>
+              <a class="btn btn-dark" href="/auth/logout">LOG OUT</a>
           </li>
         <% } else {%>
-          <li class="nav-item <% if (page === 'login') { %>active<% } %>">
+          <!-- <li class="nav-item <% if (page === 'login') { %>active<% } %>">
             <a class="nav-link" href="/auth/login">LOGIN</a>
-          </li>
-          <li class="nav-item <% if (page === 'signup') { %>active<% } %>">
+          </li> -->
+          <!-- <li class="nav-item <% if (page === 'signup') { %>active<% } %>">
               <a class="nav-link" href="/auth/signup">SIGN UP</a>
-          </li>
+          </li> -->
         <% } %>
       </ul>
     </div>
